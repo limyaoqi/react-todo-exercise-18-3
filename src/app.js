@@ -3,24 +3,8 @@ import Form from "./components/add_new_form";
 import { useState } from "react";
 
 export default function App() {
-  const [check, setCheck] = useState(false)
-  const [todoList, setTodoList] = useState([
-    {
-      id: 1,
-      text: "Task 1",
-      isCompleted: true,
-    },
-    {
-      id: 2,
-      text: "Task 2",
-      isCompleted: check,
-    },
-    {
-      id: 3,
-      text: "Task 3",
-      isCompleted: check,
-    },
-  ]);
+  const [todoList, setTodoList] = useState([]);
+  const [ isCheck, setIsCheck] = useState(false)
   return (
     <div
       className="card rounded shadow-sm"
@@ -28,7 +12,7 @@ export default function App() {
     >
       <div className="card-body">
         <h3 className="card-title mb-3">My Todo List</h3>
-        <TodoList todoList={todoList} setTodoList={setTodoList} setCheck={setCheck} />
+        <TodoList todoList={todoList} setTodoList={setTodoList} />
         <Form todoList={todoList} setTodoList={setTodoList} />
       </div>
     </div>
