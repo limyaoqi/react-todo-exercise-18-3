@@ -16,7 +16,7 @@ export default function TodoItem({
           <div>
             <button
               className="btn btn-sm btn-success"
-              onClick={() => isChecked}
+              onClick={() => isChecked(id)}
             >
               <i className="bi bi-check-square"></i>
             </button>

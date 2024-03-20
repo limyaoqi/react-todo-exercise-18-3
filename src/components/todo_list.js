@@ -12,10 +12,10 @@ export default function TodoList({ todoList, setTodoList }) {
             id={id}
             isCompleted={isCompleted}
             isChecked={(id) => {
-              const i = todoList.findIndex(todo=>todo.id == id)
-              const updateTodo = [...todoList]
-              {isCompleted?updateTodo[i].isCompleted = false:updateTodo[i].isCompleted = true}
-              setTodoList(updateTodo)
+              const i = todoList.findIndex((todo) => todo.id == id);
+              const updateTodo = [...todoList];
+              updateTodo[i].isCompleted = !isCompleted;
+              setTodoList(updateTodo);
             }}
             onDelete={(id) =>
               setTodoList(todoList.filter((todo) => todo.id !== id))

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function App() {
   const [todoList, setTodoList] = useState([]);
-  const [ isCheck, setIsCheck] = useState(false)
+  console.log(todoList);
   return (
     <div
       className="card rounded shadow-sm"
